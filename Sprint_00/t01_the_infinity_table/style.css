@@ -1,0 +1,39 @@
+table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border: 2px solid lightgrey;
+}
+thead{
+    background-color: black;
+    color: white;
+    border-bottom: none;
+}
+td{
+    padding: 10px;
+    border: 1px solid #ffffff;
+}
+img{
+    width: 100px;
+    height: 120px;
+    border-radius: 20px;
+    margin: 15px;
+}
+.background1{
+    background-color: rgb(180, 126, 26);
+}
+.background2{
+    background-color: rgb(19, 107, 19);
+}
+.background3{
+    background-color: rgb(46, 46, 175);
+}
+.background4{
+    background-color: rgb(189, 189, 34);
+}
+.background5{
+    background-color: rgb(187, 32, 32);
+}
+.background6{
+    background-color: rgb(122, 32, 122);
+}
