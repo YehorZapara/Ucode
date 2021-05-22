@@ -1,0 +1,25 @@
+input{
+    height: 2em;
+    width: 500px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    color: green;
+    border-color: blue;
+}
+input:hover{
+color: red;
+}
+button{
+    width: auto;
+    height: 2.5em;
+    border: 1px solid black;
+    color: green;
+    background-color: rgb(228, 228, 228); 
+    border-radius: 5px;
+    position:absolute;
+    margin: auto;
+}
+button:hover {
+    color: red;
+}
