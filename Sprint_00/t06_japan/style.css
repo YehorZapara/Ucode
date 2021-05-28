@@ -14,7 +14,7 @@ h1 {
 
 .japan::after {
     content: "";
-    position:absolute;
+    position: absolute;
     width: 160px;
     height: 160px;
     background: red;
