@@ -1,0 +1,12 @@
+.man-image {
+    max-height: 100px;
+}
+
+#The-infinity-gauntlet {
+    max-height: 350px;
+}
+
+#The-infinity-gauntlet:hover~table tbody tr:nth-child(2n+1) td:nth-child(2n+1), 
+#The-infinity-gauntlet:hover~table tbody tr:nth-child(2n) td:nth-child(2n) {
+    visibility: hidden;
+}
