@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Handbook...</title>
+    <meta name="description" content="t00. Turn around...">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Handbook</h1>
+    <div class="HTML">
+        <h2>HTML</h2>
+        <div class="grid">
+            <div>
+                <p class="head">h1</p>
+                <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags. &lt;h1&gt; defines the most
+                    important heading. &lt;h6&gt; defines the least important heading </p>
+                <p>&lt;h1&gt;This is heading 1&lt;/h1&gt;</p>
+                <h1>This is heading 1</h1>
+            </div>
+            <div>
+                <p class="head">p</p>
+                <p>HTML paragraphs are defined with the &lt;p&gt; tag</p>
+                <p>&lt;p&gt;This is a paragraph.&lt;p&gt;</p>
+                <p>This is a paragraph</p>
+            </div>
+            <div>
+                <p class="head">a</p>
+                <p>HTML links are defined with the &lt;a&gt; tag. The link's destination is specified in the href
+                    attribute. Attributes are used to provide additional information about HTML elements</p>
+                <p>&lt;a&gt;href="https://www.w3schools.com">This is a link&lt;a&gt;</p>
+                <a href="https://www.w3schools.com">This is a link</a>
+            </div>
+            <div>
+                <p class="head">ul</p>
+                <p> This is type of list that you may wish to include is an &lt;ul&gt; unordered list. This is better
+                    known as a bullet point list and contains no numbers</p>
+                <p>
+                    &lt;ul&gt;<br>
+                    &lt;li&gt;This is &lt;/li&gt;<br>
+                    &lt;li&gt;An Unordered &lt;/li&gt;<br>
+                    &lt;li&gt;List &lt;/li&gt;<br>
+                    &lt;/ul&gt;
+                </p>
+                <ul>
+                    <li>This is </li>
+                    <li>An Unordered </li>
+                    <li>List </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="CSS">
+        <h2>CSS</h2>
+        <div class="grid">
+            <div>
+                <p class="head">border</p>
+                <p>The CSS border property defines a border around an HTML element. Tip: You can define a border for
+                    nearly all HTML elements</p>
+                <p>p {<br>
+                    border: 2px solid powderblue;<br>
+                    }</p>
+                <p class="border"></p>
+            </div>
+            <div>
+                <p class="head">padding</p>
+                <p>The CSS padding property defines a padding (space) between the text and the border</p>
+                <p>p {<br>
+                    border: 2px solid powderblue;<br>
+                    padding: 30px;<br>
+                    }</p>
+                <p class="padding"></p>
+            </div>
+            <div>
+                <p class="head">margin</p>
+                <p>The CSS margin property defines a margin (space) outside the border</p>
+                <p>p {<br>
+                    border: 2px solid powderblue;<br>
+                    padding: 30px;
+                    margin: 50px;<br>
+                    }</p>
+                <p class="margin"></p>
+            </div>
+            <div>
+                <p class="head">background-color</p>
+                <p> The CSS background properties are used to add background effects for elements</p>
+                <p>
+                    p {<br>
+                    border: 2px solid black;<br>
+                    padding: 30px;<br>
+                    margin: 50px;<br>
+                    background-color: lightblue;<br>
+                    }
+                </p>
+                <p class="background"></p>
+            </div>
+        </div>
+    </div>
+    <div class="PROTOCOLS">
+        <h2>PROTOCOLS</h2>
+        <div class="grid_second">
+            <div>
+                <p class="head">HTTP Methods</p>
+                <p>GET - is used to request data from a specified resource, it should never be used when dealing with
+                    sensitive data, it has length restrictions and are only used to request data (not modify)</p>
+                <p>POST - is used to send data to a server to create/update a resource. The data sent to the server with
+                    POST is stored in the request body of the HTTP request. POST requests have no restrictions on data
+                    length</p>
+                <p>PUT - is used to send data to a server to create/update a resource. The difference between POST and
+                    PUT is that PUT requests are idempotent. That is, calling the same PUT request multiple times will
+                    always produce the same result</p>
+                <p>HEAD - is almost identical to GET, but without the response body. In other words, if GET /users
+                    returns a list of users, then HEAD /users will make the same request but will not return the list of
+                    users</p>
+                <p>DELETE - deletes the specified resource</p>
+                <p>OPTIONS - describes the communication options for the target resource</p>
+            </div>
+            <div>
+                <p class="head">HTTP status code</p>
+                <p>1xx Informational <br> example: 100 Continue</p>
+                <p>2xx Success <br> example: 200 OK</p>
+                <p>3xx Redirection <br> example: 300 Multiple Choices</p>
+                <p>4xx Error <br> example: 400 Bad Request</p>
+                <p>5xx Informational <br> example: 500 Internal Server Error</p>
+            </div>
+            <div>
+                <p class="head">DNS list by types</p>
+                <p>A - returns a 32-bit IPv4 address, most commonly used to map hostnames to an IP address of the host,
+                    but it is also used for DNSBLs, storing subnet masks in RFC 1101, etc</p>
+                <p>AAAA - returns a 128-bit IPv6 address, most commonly used to map hostnames to an IP address of the
+                    host</p>
+                <p>CNAME - alias of one name to another: the DNS lookup will continue by retrying the lookup with the
+                    new name</p>
+                <p>HINFO - providing Minimal-Sized Responses to DNS Queries That Have QTYPE=ANY</p>
+                <p>ISDN - is a set of communication standards for simultaneous digital transmission of voice, video,
+                    data, and other network services over the digitalised circuits of the public switched telephone
+                    network</p>
+                <p>MX - specifies the mail server responsible for accepting email messages on behalf of a domain name.
+                    It is a resource record in the Domain Name System (DNS). It is possible to configure several MX
+                    records, typically pointing to an array of mail servers for load balancing and redundancy</p>
+                <p>NS - delegates a DNS zone to use the given authoritative name servers</p>
+                <p>PTR - pointer to a canonical name. Unlike a CNAME, DNS processing stops and just the name is
+                    returned. The most common use is for implementing reverse DNS lookups, but other uses include such
+                    things as DNS-SD</p>
+                <p>SQA - specifies authoritative information about a DNS zone, including the primary name server, the
+                    email of the domain administrator, the domain serial number, and several timers relating to
+                    refreshing the zone</p>
+                <p>TXT - originally for arbitrary human-readable text in a DNS record. Since the early 1990s, however,
+                    this record more often carries machine-readable data, such as specified by RFC 1464, opportunistic
+                    encryption, Sender Policy Framework, DKIM, DMARC, DNS-SD, etc</p>
+            </div>
+            <div>
+                <p class="head">Identifying google ip</p>
+                <p>To identify google IP, folow the next steps:</p>
+                <p>1. open Terminal</p>
+                <p>2. paste and run the command nslookup google.com</p>
+                <p>As result, you will receive "name" and "adress": <br> Name: google.come.ua <br> Adress:216.58.215.99
+                    <br> Repeat steps 1 and 2 to identify google.com.ua IP
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

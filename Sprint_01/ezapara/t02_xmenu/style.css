@@ -52,6 +52,10 @@ h1 {
 .menu li>ul li a {
     padding: 10px;
     text-transform: none;
+    text-align: left;
+}
+.menu li>ul li a:hover {
+    color: white;
 }
 
 .menu li>ul li ul {
