@@ -1,0 +1,33 @@
+h1 {
+    text-align: center;
+}
+input {
+    height: 1em;
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    color: green;
+    border-color: blue;
+}
+
+input:hover {
+    color: red;
+}
+
+button {
+    width: 100px;
+    height: 2.5em;
+    border: 1px solid black;
+    color: green;
+    background-color: rgb(228, 228, 228);
+    border-radius: 5px;
+}
+
+button:hover {
+    color: red;
+}
+
+.flex-container{
+    display: flex;
+    
+}

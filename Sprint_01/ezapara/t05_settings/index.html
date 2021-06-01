@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Settings</h1>
+    <div class="box">
+
+        <div class="tools">
+            <div class="grid">
+                <div>
+                    <p>Typeface</p>
+                    <select class="selection" name="typeface" id="tf">
+                        <option value="acunim">Acunim Pro</option>
+                        <option value="sans">Comic Sans</option>
+                        <option value="times">Times New Roman</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="switch">Dark UI</label>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div>
+                    <p>Weight</p>
+                    <div class="weight">
+                        <input class="regular" type="checkbox" name="regular" value="regular">
+                        <label for="regular">Regular</label>
+                        <input type="checkbox" name="bold" value="bold">
+                        <label for="bold">Bold</label>
+                    </div>
+                </div>
+                <div>
+                    <p>Color</p>
+                    <input type="checkbox" name="blue" value="blue">
+                    <input type="checkbox" name="aqua" value="aqua">
+                    <input type="checkbox" name="pink" value="pink">
+                    <input type="checkbox" name="yellow" value="yellow">
+                    <input type="checkbox" name="orange" value="orange">
+                </div>
+                <div>
+                    <p>Size</p>
+                    <label for="size">A</label>
+                    <input type="range" name="size" min="0" max="10">
+                    <label for="size">A</label>
+                </div>
+            </div>
+        </div>
+        <div class="submenu">
+            <img src="assets/images/artistic-brush.png" alt="img1">
+            <img src="assets/images/computer-screen.png" alt="img2">
+            <img src="assets/images/sms-speech-bubble.png" alt="img3">
+            <img src="assets/images/user-icon.png" alt="img4">
+        </div>
+    </div>
+</body>
+
+</html>
