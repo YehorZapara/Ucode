@@ -22,34 +22,43 @@
                     </select>
                 </div>
                 <div>
-                    <label for="switch">Dark UI</label>
+                    <span>Dark UI</span>
                     <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" id="switch_id">
                         <span class="slider round"></span>
                     </label>
                 </div>
                 <div>
                     <p>Weight</p>
                     <div class="weight">
-                        <input class="regular" type="checkbox" name="regular" value="regular">
-                        <label for="regular">Regular</label>
-                        <input type="checkbox" name="bold" value="bold">
-                        <label for="bold">Bold</label>
+                        <input class="regular" type="checkbox" name="regular" value="None" id="regular_id">
+                        <label for="regular_id">Regular</label>
+                        <input class="regular" type="checkbox" name="bold" value="None" id="bold_id">
+                        <label for="bold_id">Bold</label>
                     </div>
                 </div>
                 <div>
                     <p>Color</p>
-                    <input type="checkbox" name="blue" value="blue">
-                    <input type="checkbox" name="aqua" value="aqua">
-                    <input type="checkbox" name="pink" value="pink">
-                    <input type="checkbox" name="yellow" value="yellow">
-                    <input type="checkbox" name="orange" value="orange">
+
+                    <input class="color" type="checkbox" name="blue" value="blue" id="blue">
+                    <label for="blue"></label>
+                    <input class="color" type="checkbox" name="aqua" value="aqua" id="aqua">
+                    <label for="aqua"></label>
+                    <input class="color" type="checkbox" name="pink" value="pink" id="pink">
+                    <label for="pink"></label>
+                    <input class="color" type="checkbox" name="yellow" value="yellow" id="yellow">
+                    <label for="yellow"></label>
+                    <input class="color" type="checkbox" name="orange" value="orange" id="orange">
+                    <label for="orange"></label>
+
                 </div>
                 <div>
                     <p>Size</p>
-                    <label for="size">A</label>
-                    <input type="range" name="size" min="0" max="10">
-                    <label for="size">A</label>
+                    <div class="A">A</div>
+                    <label for="size_id"></label>
+                    <input class="size" type="range" name="size" min="0" max="10" id="size_id">
+                    <label for="size_id"></label>
+                    <div class="AA">A</div>
                 </div>
             </div>
         </div>

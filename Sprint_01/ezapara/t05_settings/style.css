@@ -1,27 +1,26 @@
 .box {
-    background-color: rgb(38, 38, 75);
+    background-color: rgb(58, 58, 85);
     color: white;
     display: block;
-    padding: 5% 150px 3% 3%;
+    padding: 50px 120px 0px 50px;
+    position: absolute;
+    height: 800px;
 }
 
-img{
+img {
     margin: 25%;
-    
 }
 
-.submenu{
-    width: 9%;
-    height: 68%;
-    padding: auto;
+.submenu {
+    width: 10%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     background-color: gray;
     position: relative;
     left: 100%;
-    bottom: 600px;
+    bottom: 630px;
     border-radius: 0 20% 20% 0;
-
 }
 
 .tools {
@@ -35,7 +34,7 @@ img{
     row-gap: 20px;
     grid-auto-rows: minmax(200px, auto);
     margin: 30px;
-    grid-template-columns: auto auto;
+    grid-template-columns: 450px 500px;
 }
 
 .grid>div {
@@ -47,6 +46,7 @@ img{
     display: inline-block;
     width: 60px;
     height: 34px;
+    margin-left: 300px;
 }
 
 .switch input {
@@ -57,7 +57,6 @@ img{
 
 .slider {
     position: absolute;
-    cursor: pointer;
     top: 0;
     left: 0;
     right: 0;
@@ -104,13 +103,124 @@ input:checked+.slider:before {
 .selection {
     background-color: rgb(51, 48, 48);
     color: white;
+    width: 300px;
+    height: 30px;
 }
-input[type=range]::-webkit-slider-runnable-track {
+
+.regular {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.regular+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.regular+label::before {
+    content: "";
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    margin-right: 1em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    background-color: black;
+}
+
+.regular:checked+label::before {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.color {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.color+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.color+label::before {
+    content: "";
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    margin-right: 1em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    border-radius: 50%;
+}
+
+.color:checked+label::before {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+#blue+label::before {
+    background-color: blue;
+}
+
+#aqua+label::before {
+    background-color: aqua;
+}
+
+#pink+label::before {
+    background-color: rgb(241, 124, 144);
+}
+
+#yellow+label::before {
+    background-color: rgb(194, 194, 8);
+}
+
+#orange+label::before {
+    background-color: orange;
+}
+
+.slidecontainer {
     width: 100%;
+}
+
+.size {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 350px;
     height: 2px;
-    cursor: pointer;
     background: black;
-  }
-  input[type=range]::-webkit-slider-thumb {   
-    margin-top: -7px;
-  }
+    outline: none;
+}
+
+.size::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background: aqua;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.A {
+    position: relative;
+    bottom: -70px;
+    font-size: 30px;
+}
+
+.AA {
+    position: relative;
+    left: 330px;
+    top: 10px;
+    font-size: 50px;
+}

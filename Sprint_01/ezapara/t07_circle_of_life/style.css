@@ -1,0 +1,35 @@
+@keyframes example {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    50% {
+        left: 100%;
+        top: 0px;
+    }
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
+
+.object {
+    position: relative;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    animation-name: example;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+body {
+    padding: 30px;
+    padding-right: 120px;
+}
+
+.object:hover {
+    background-color: red;
+    transition-duration: 2s;
+}
