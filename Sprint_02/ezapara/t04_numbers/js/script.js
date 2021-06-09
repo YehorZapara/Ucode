@@ -30,4 +30,3 @@ function checkDivision(beginRange, endRange) {
     }
 }checkDivision(beginRange, endRange)
 
-
