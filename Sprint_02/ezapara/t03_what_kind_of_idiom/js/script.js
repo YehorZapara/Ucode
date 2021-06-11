@@ -34,7 +34,7 @@ for (let i = 0; i < Infinity; i++) {
                         alert(`Cheaper by the dozen`);
                         break;
                 default:
-                        prompt(`Error`);
+                       alert(`Error`);
         }
 }
 
