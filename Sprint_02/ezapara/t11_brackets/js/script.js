@@ -7,15 +7,11 @@ function checkBrackets(str) {
         return -1;
     }
     for (let i = 0; i <= str.length; i++) {
-
         if (str[i] === '(') {
             brackets.push(str[i]);
         } else if (str[i] === ')') {
             if (brackets[brackets.length - 1] === '(') brackets.pop();
-            else brackets.push('');
-        }
-        else if (str[i] !== ')' && str[i] !== '(') {
-
+            else brackets.push(1);
         }
     }
     return brackets.length;
