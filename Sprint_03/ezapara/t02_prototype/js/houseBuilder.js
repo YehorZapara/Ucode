@@ -1,13 +1,28 @@
-let houseBlueprint (address, date, description, owner, size)={
-        this.address=address;
-        this.date=date;
-        this.description=description;
-        this.owner=owner;
-        this.size=size;
+const houseBlueprint = {
+    address: 0,
+    date: 0,
+    description: 0,
+    owner: 0,
+    size: 0,
+    _averageBuildSpeed: 0.5,
+    getDaysToBuild: function() {
+        return (size / _averageBuildSpeed);
     }
-    getDaysToBuild(){
-        return this.size*2;
+}
+
+function houseBuilder(address, description, owner, size, roomCount, _averageBuildSpeed, getDaysToBuild) {
+    this.address = address;
+    this.description = description;
+    this.owner = owner;
+    this.size = size;
+    this.roomCount = roomCount;
+    this.date = new Date ();
+    this._proto_=houseBlueprint;
+    this._averageBuildSpeed=0.5;
+    this.getDaysToBuild= function() {
+        return (this.size / this._averageBuildSpeed);
     }
+}
 
 
 
@@ -15,7 +30,11 @@ let houseBlueprint (address, date, description, owner, size)={
 
 
 
-const house = new HouseBuilder('88 Crescent Avenue',
+
+
+
+
+const house = new houseBuilder('88 Crescent Avenue',
     'Spacious town house with wood flooring, 2-car garage, and a back patio.',
     'J. Smith',
     110,
@@ -43,4 +62,4 @@ console.log(house.getDaysToBuild());
 // 220
 
 console.log(house.roomCount);
-// 5
+// 5*/
