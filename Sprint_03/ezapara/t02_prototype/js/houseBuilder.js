@@ -6,25 +6,20 @@ const houseBlueprint = {
     size: 0,
     _averageBuildSpeed: 0.5,
     getDaysToBuild: function() {
-        return (size / _averageBuildSpeed);
+        return (this.size / this._averageBuildSpeed);
     }
 }
 
-function houseBuilder(address, description, owner, size, roomCount, _averageBuildSpeed, getDaysToBuild) {
+function houseBuilder(address, description, owner, size, roomCount, _averageBuildSpeed) {
     this.address = address;
     this.description = description;
     this.owner = owner;
     this.size = size;
     this.roomCount = roomCount;
     this.date = new Date ();
-    this._proto_=houseBlueprint;
-    this._averageBuildSpeed=0.5;
-    this.getDaysToBuild= function() {
-        return (this.size / this._averageBuildSpeed);
-    }
 }
 
-
+houseBuilder.prototype = houseBlueprint;
 
 
 

@@ -1,0 +1,28 @@
+class HardWorker {
+    constructor(name) {
+        this.name = name;
+    }
+    set age(age) {
+        if (1 <= age && age < 100) {
+            this._age = age;
+        }
+    }
+    get age() {
+        return this._age;
+    }
+
+    set salary(salary) {
+        if (100 <= salary && salary < 10000) {
+            this._salary = salary;
+        }
+    }
+    get salary() {
+        return this._salary;
+    }
+    toObject() {
+        console.log(`name: ${this.name}, age: ${this.age}, salary: ${this.salary}`)
+
+    }
+}
+
+export {HardWorker};
