@@ -20,7 +20,7 @@ class HardWorker {
         return this._salary;
     }
     toObject() {
-        console.log(`name: ${this.name}, age: ${this.age}, salary: ${this.salary}`)
+        return{name: this.name, age: this.age, salary: this.salary};
 
     }
 }

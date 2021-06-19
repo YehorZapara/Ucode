@@ -1,20 +1,39 @@
-class createLinkedList {
-    constructor(data, value) {
-        this.data = data
-        this.next = null                
+class LinkedList {
+    constructor(data) {
+        this.data = data;
     }
-    size() {
-        let count = 0; 
-        let node = this.head;
-        while (node) {
-            count++;
-            node = node.next
+    add(value) {
+        return this.data.push(value);
+    }
+    remove(value) {
+        for (let i = 0; i < this.data.length; i++) {
+            if (this.data[i] === value) {
+                this.data.splice(i, 1);
+            }
         }
-        return count;
+    }
+    contains(value) {
+        return this.data.includes(value);
+    }
+    *[Symbol.iterator](value) {
+        for (value of this.data) {
+            yield value;
+        }
     }
     clear() {
-        this.head = null;
+        return this.data = [];
     }
+    count() {
+        return this.data.length;
+    }
+    log() {
+        console.log(this.data.join(', '));
+    }
+}
+
+
+function createLinkedList(data) {
+    return new LinkedList(data);
 }
 
 
