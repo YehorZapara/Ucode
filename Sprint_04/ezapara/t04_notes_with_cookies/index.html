@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Notes with cookies</title>
+    <meta name="description" content="t04_notes_with_cookies">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="buttons">
+            <input type ='button' id="button_1" value = 'Add to cookies' onclick="setCookie()"/>
+            <input type ='button' id="button_2" value = 'Clear cookies' onclick="clearCookie()"/>
+        </div>
+        <div class="input">
+            <p>Text input</p>
+            <textarea type ='text' name="Textinput" id="TextInput"></textarea>
+        </div>
+        <div class="notes">
+            <p>Notes archive</p>
+            <textarea name="archive" class="archive" id="archive" type="text"></textarea>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
