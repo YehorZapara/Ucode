@@ -3,6 +3,7 @@ let note = document.querySelector(".archive");
 
 let count = 0;
 
+render();
 
 function setCookie(){
     if(text.value === ''){

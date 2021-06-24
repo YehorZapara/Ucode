@@ -1,0 +1,48 @@
+  
+:root {
+	--size: 80px;
+}
+body {
+	position: relative;
+}
+
+.stone {
+	position:absolute;
+	transform: rotate(45deg);
+	border: 1px solid gray;
+	width: var(--size);
+	height: var(--size);
+}
+.stone-1 {
+	background-color: indianred;
+	top: 450px;
+	left: 190px;
+}
+.stone-2 {
+	background-color: rgb(112, 9, 9);
+	top: 350px;
+	left: 190px;
+}
+.stone-3 {
+	background-color: rgb(117, 92, 205);
+	top: 350px;
+	left: 290px;
+}
+.stone-4 {
+	background-color: rgb(190, 185, 185);
+	top: 50px;
+	left: 90px;
+}
+.stone-5 {
+	background-color: rgb(149, 224, 9);
+	top: 150px;
+	left: 290px;
+}
+.stone-6 {
+	background-color: rgb(4, 139, 4);
+	top: 250px;
+	left: 190px;
+}
+.active {
+	border: 5px dotted  rgb(0, 0, 0);
+}
