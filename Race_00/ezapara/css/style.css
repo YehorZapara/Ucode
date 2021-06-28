@@ -1,0 +1,56 @@
+body {
+    user-select: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: rgb(61, 90, 92);
+    border-radius: 15px;
+    max-width: 800px;
+    height: 650px;
+    font-family: "Calibri";
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item {
+    color: gray;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.input {
+    min-height: 60px;
+    height: auto;
+    padding: 5px 20px;
+    grid-column: 1/-1;
+    font-size: 40px;
+    justify-content: flex-end;
+}
+
+.upper {
+    font-size: 20px;
+    margin-left: 3px;
+    margin-top: -20px;
+}
+
+.clean, .back, .percent, .divide, .mul, .sub, .add, .gap, .plusmn, .fact, .operation {
+    color: #ff7c01;
+}
+
+.equal {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    grid-column: 4 / 4;
+    background-color: #ff7c01;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
