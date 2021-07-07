@@ -60,3 +60,13 @@ function factorial(n) {
 function fact() {
     input.textContent = factorial(+eval(input.textContent));
 }
+
+function constant(name) {
+    if (input.textContent == 0) {
+        input.textContent = "";
+    }
+    if (name == "pi")
+        input.textContent += Math.PI.toFixed(8);
+    if (name == "e")
+        input.textContent += Math.E.toFixed(8);
+}

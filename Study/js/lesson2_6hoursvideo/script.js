@@ -432,3 +432,417 @@ heading2.addEventListener('dblclick', () => {
     heading2.style.backgroundColor = '#000'
   }
 }) */
+
+/* const persone ={
+    name: "Yegor",
+    age: 24,
+    greet: function () {
+        console.log('greet!')
+    }
+} */
+
+
+
+
+//Proto
+/* const persone = new Object ({
+    name: "Yegor",
+    age: 24,
+    greet: function () {
+        console.log('greet!')
+    }
+})
+
+Object.prototype.sayHello = function () {
+    console.log('Hello!')
+}
+persone.sayHello()
+
+const lena = Object.create(persone)
+lena.greet()
+lena.name='Elena'
+
+const str = new String ("I am string") */
+
+
+
+
+
+//Context
+/* function hello() {
+    console.log('Hello', this)
+}
+
+const person = {
+    name: "Yegor",
+    age: 24,
+    sayHello: hello,
+    sayHelloWindow: hello.bind(document),
+    logInfo: function (job, phone) {
+        console.group(`${this.name} info`)
+        console.log(`Name is ${this.name}`)
+        console.log(`Age is ${this.age}`)
+        console.log(`Job is ${job}`)
+        console.log(`Phone is ${phone}`)
+        console.groupEnd()
+    }
+}
+const lena = {
+    name: "Elena",
+    age: 23
+}
+// const fnLenaInfoLog = person.logInfo.bind(lena)
+// fnLenaInfoLog('Frontend', '34234-23432-23423')
+
+// const fnLenaInfoLog = person.logInfo.bind(lena,'Frontend', '34234-23432-23423')
+// fnLenaInfoLog()
+
+// const fnLenaInfoLog = person.logInfo.bind(lena,'Frontend', '34234-23432-23423')()
+// person.logInfo.call(lena,'Frontend', '34234-23432-23423')
+// person.logInfo.apply(lena,['Frontend', '34234-23432-23423'])
+
+//==========
+
+const array = [1, 2, 3, 4, 5]
+// function multBy(arr, n) {
+//     return arr.map((i) => { return i * n })
+// }
+// console.log(multBy(array, 5))
+
+Array.prototype.multBy = function (n) {
+    return this.map((i) => {
+        return i * n
+    })
+}
+console.log(array.multBy(2)) */
+
+
+
+
+
+// Zamikanija
+// function createCalcFunction(n) {
+//     return function () {
+//         console.log(1000*n)
+//     }
+// }
+// const calc = createCalcFunction(42)
+// calc()
+
+// function createIncrementore(n) {
+//     return function (num) {
+//         return n +num
+//     }
+// }
+// const addOne = createIncrementore(1)    
+// const addten = createIncrementore(10)
+
+// console.log(addOne(10))
+// console.log(addten(10))
+
+/* function urlGeneratore(domain) {
+    return function (url) {
+        return `https://${url}.${domain}`
+    }
+}
+const comUrl=urlGeneratore('com')
+const ruUrl = urlGeneratore('ru')
+console.log(comUrl('google'))
+console.log(comUrl('netfix'))
+
+console.log(ruUrl('yandex')) */
+/* 
+function bind(c, fn) {
+    return function (...arr) {
+        fn.apply(c, arr)
+        
+    }
+}
+
+function logPerson() {
+    console.log(`Persone: ${this.name}, ${this.age}, ${this.job}`)
+}
+const person1 = {name: 'Michael', age: 22, job: 'SMM'}
+const person2 = {name: 'Elena', age: 19, job: 'Frontend'}
+
+bind(person1, logPerson)()
+bind(person2, logPerson)() */
+
+
+
+//Asinchron
+
+/* console.log('Start')
+console.log('Start2')
+
+function temeout2sec() {
+    console.log('temeout 2sec')
+}
+
+window.setTimeout(function () {
+    console.log(`Inside temeout, after 2000 seconds`)
+}, 2000)
+
+setTimeout(temeout2sec, 0)
+
+console.log('End') */
+
+
+
+
+
+//Promise
+// console.log('Request data...')
+// /*setTimeout(()=>{
+//     console.log('Prepearig data...')
+//     const backendData = {
+//         server: 'aws',
+//         port: 2000,
+//         status: 'working'
+//     }
+//     setTimeout(()=>{
+//         backendData.modified = true
+//         console.log('Data received', backendData)
+//     }, 2000)
+// }, 2000) */
+
+// const p = new Promise(function (resolve, reject) {
+//     setTimeout(() => {
+//         console.log('Prepearig data...')
+//         const backendData = {
+//             server: 'aws',
+//             port: 2000,
+//             status: 'working'
+//         }
+//         resolve(backendData)
+//     }, 2000);
+// })
+
+// p.then(data => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             data.modified = true
+//             resolve(data)
+//         }, 2000);
+//     })
+//     // p2.then(clientData => {
+//     //     console.log('Data received', clientData)
+//     // })
+
+// }).then(clientData => {
+//     console.log('Data received', clientData)
+// })
+//     .then(data => {
+//         console.log('modified', data)
+//     })
+//     .catch((err) => {
+//         console.error('error: ', err)
+//     })
+// .finally(()=> console.log('Finaly'))
+
+
+/* const sleep = ms => {
+    return new Promise(resolve => {
+        setTimeout(() => resolve(), ms)
+    })
+}
+
+// sleep(2000).then(()=>console.log('After 2 sec'))
+// sleep(3000).then(()=>console.log('After 3 sec'))
+
+Promise.all([sleep(2000), sleep(4000)]).then(()=>{
+    console.log('All promises')
+})
+
+Promise.race([sleep(2000), sleep(4000)]).then(()=>{
+    console.log('Race promises')
+}) */
+
+
+
+
+//Objects
+/* const person = Object.create(
+    {
+        calculateAge(){
+            console.log('Age: ',new Date().getFullYear() - this.birthYear)
+        }
+    },
+    {
+        name: {
+            value: 'Yegor',
+            enumerable: true,
+            writable: true,
+            configurable: true
+        },
+        birthYear: {
+            value: 1997,
+        },
+        age:{
+            get(){
+                return new Date().getFullYear() - this.birthYear
+            },
+            set(value){
+                console.log('Set age', value)
+            }
+        }
+    })
+person.name = "Maxim"
+
+for (let key in person) {
+    console.log('Key', key, person[key])
+} */
+
+
+
+
+
+//Classes
+// const animal = {
+//     name: 'Animal',
+//     age: 5,
+//     hasTail: true
+// }
+// class Animal {
+//     static type = 'ANIMAL'
+//     constructor(option) {
+//         this.name = option.name
+//         this.age = option.age
+//         this.hasTail = option.hasTail
+//     }
+// voice(){
+//     console.log("I am Animal!")
+// }    
+// } 
+
+// // const animal = new Animal({
+// //     name: 'Animal',
+// //     age: 5,
+// //     hasTail: true
+// // })
+
+// class Cat extends Animal{
+//     constructor(option){
+//         super(option)
+//         this.color=option.color
+
+//     }
+//     voice(){
+//         super.voice()
+//         console.log('Iam cat')
+//     }
+//     get ageInfo(){
+//         return this.age*7
+//     }
+//     set ageInfo(newAge){
+//         this.age=newAge
+//     }
+// }
+// const cat = new Cat({
+//     name: 'Cat',
+//     age: 7,
+//     hasTail: true,
+//     color: 'black'
+// })
+
+// class Component {
+//     constructor(selector) {
+//         this.$el = document.querySelector(selector)
+//     }
+//     hide() {
+//         this.$el.style.display = 'none'
+//     }
+//     show() {
+//         this.$el.style.display = 'block'
+//     }
+// }
+// class Box extends Component {
+//     constructor(option) {
+//         super(option.selector)
+
+//         this.$el.style.width = this.$el.style.height = option.size + 'px'
+//         this.$el.style.background = option.color
+//     }
+// }
+// const box1 = new Box({
+//     selector: '#box1',
+//     size: 100,
+//     color: 'red'
+// })
+// const box2 = new Box({
+//     selector: '#box2',
+//     size: 100,
+//     color: 'blue'
+// })
+
+// class Circle extends Box {
+//     constructor(option) {
+//         super(option)
+
+//         this.$el.style.borderRadius = '50%'
+//     }
+// }
+// const c = new Circle({
+//     selector: '#circle',
+//     size: 90,
+//     color: 'green'
+// })
+
+
+
+
+
+//Async Await
+
+// const delay = ms => {
+//     return new Promise(r => setTimeout(() => r(), ms))
+// }
+// // delay(2000).then(()=>console.log('2 sec'))
+
+// const url = 'https://jsonplaceholder.typicode.com/todos'
+
+// /* function fetchTools() {
+//     console.log('Fetch todo stared...')
+//     // fetch(url).then(response => response.json())
+//     return delay(2000).then(() => fetch(url))
+//     .then(response => response.json())
+// }
+// fetchTools().then(data => {
+//     console.log('Data:', data)
+// }).catch((e) => {
+//     console.error(e)
+// }) */
+
+// async function fetchAsyncTodos(){
+//     console.log('Fetch todo stared...')
+//     try {
+//     await delay(2000)
+//      const response = await fetch(url)
+//      const data = await response.json()
+//      console.log('Data', data)
+//     } catch (e) {
+//     console.error(e)
+//     }finally{
+    
+//     }
+// }
+// fetchAsyncTodos()
+
+
+
+
+
+//Proxy
+const person ={
+    name: 'Yegor',
+    age:24,
+    job: 'FullStack'
+}
+
+const op =new Proxy(person, {
+    get(target,prop){
+        console.log('Target', target)
+        console.log('Prop', prop)
+        return target[prop]
+    }
+})
