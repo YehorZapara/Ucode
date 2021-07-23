@@ -823,7 +823,7 @@ for (let key in person) {
 //     } catch (e) {
 //     console.error(e)
 //     }finally{
-    
+
 //     }
 // }
 // fetchAsyncTodos()
@@ -833,16 +833,524 @@ for (let key in person) {
 
 
 //Proxy
-const person ={
-    name: 'Yegor',
-    age:24,
-    job: 'FullStack'
-}
+// const person ={
+//     name: 'Yegor',
+//     age:24,
+//     job: 'FullStack'
+// }
 
-const op =new Proxy(person, {
-    get(target,prop){
-        console.log('Target', target)
-        console.log('Prop', prop)
-        return target[prop]
-    }
-})
+// const op =new Proxy(person, {
+//     get(target,prop){
+//         console.log('Target', target)
+//         console.log('Prop', prop)
+//         return target[prop]
+//     }
+// })
+
+
+
+
+
+//Massive
+// const people = [
+//     { name: 'Vladlen', age: 23, budjet: 30000 },
+//     { name: 'Vlad', age: 25, budjet: 40000 },
+//     { name: 'Andrew', age: 24, budjet: 20000 },
+//     { name: 'Petr', age: 17, budjet: 10000 },
+//     { name: 'Yegor', age: 22, budjet: 50000 },
+//     { name: 'Tom', age: 20, budjet: 60000 }
+// ]
+
+//For
+// for (let i = 0; i < people.length; i++) {
+//     console.log(people[i])
+// }
+
+// for(let person of people){
+//     console.log(person)
+// }
+
+
+//ForEach
+// people.forEach(person => {
+//     console.log(person)
+// })
+
+
+//Map
+// const newPeople = people.map(person => `${person.name} (${person.age}) ${person.age *3}`)
+// console.log(newPeople)
+
+
+//Filter
+// const adults = []
+// for(let i = 0;i<people.length; i++){
+//     if (people[i].age>=18) {
+//         adults.push(people[i])
+//     }
+// }
+// console.log(adults)
+
+// const adults = people.filter(person=>{
+//     if (person.age>=18) {
+//         return true
+//     }
+// })
+
+// const adults = people.filter(person=>person.age>=18)   
+// console.log(adults)
+
+
+//Reduce
+// let amount = 0
+// for (let i = 0; i < people.length; i++) {
+//     amount+=people[i].budjet
+// }
+// console.log(amount)
+
+// const amount = people.reduce((total, person)=> total+person.budjet,0)
+// console.log(amount)
+
+
+//Find
+// const igor = people.find(person=>person.name==='Yegor')
+// console.log(igor)
+// const igorIndex = people.findIndex(person=>person.name==='Yegor')
+// console.log(igorIndex)
+
+
+//------------
+// const amount = people
+//     .filter(person => person.budjet > 10000)
+//     .map(person => {
+//         return {
+//             info: `${person.name} (${person.age})`,
+//             budjet: Math.sqrt(person.budjet)
+//         }
+//     })
+//     .reduce((total, person) => total + person.budjet, 0)
+// console.log(amount)
+
+
+
+
+
+
+
+
+
+//Map
+// const obj = {
+//     name: 'Yegor',
+//     age: 24,
+//     job: 'FullStack'
+// }
+
+// const entries = [
+//     ['name', 'Vladilen'],
+//     ['age', 26],
+//     ['job', 'FullStack']
+// ]
+
+// // console.log(Object.entries(obj))
+// // console.log(Object.fromEntries(entries))
+
+// const map = new Map(entries)
+
+// console.log(map.get('job'))
+// console.log(obj.job)
+
+// map
+//     .set('newField', 42)
+//     .set(obj, 'Value of object')
+//     .set(NaN, 'NaN ??')
+
+// console.log(map.get(NaN))
+
+// map.delete('job')
+// console.log(map.has('job'))
+// console.log(map.size)
+// map.clear()
+// console.log(map.size);
+
+
+//-----------------
+
+
+// for (const [key, value] of map) {
+//     console.log(key, value)
+// }
+
+// for (const val of map.values()) {
+//     console.log(val)
+// }
+
+// for (const key of map.keys()) {
+//     console.log(key)
+// }
+
+// map.forEach((val, key, m)=>{
+//     console.log(val,key)
+// })
+
+
+//-------------------
+// const array = Array.from(map)
+
+// const mapObj = Object.fromEntries(map.entries())
+
+// console.log(mapObj)
+
+
+//----------------------
+// const users = [
+//     { name: 'Elena' },
+//     { name: 'Alex' },
+//     { name: 'Irina' }
+// ]
+// const visits = new Map()
+// visits
+//     .set(users[0], new Date())
+//     .set(users[1], new Date(new Date().getTime() + 1000 * 60))
+//     .set(users[2], new Date(new Date().getTime() + 5000 * 60))
+
+// function lastVisit(users) {
+//     return visits.get(users)
+// }
+// console.log(lastVisit(users[2]))
+
+
+
+
+
+
+
+
+//Set
+// const set = new Set([1,2,3,3,3,3,4,5,5,6])
+
+// set.add(10).add(20).add(30).add(20)
+// // console.log(set)
+// // console.log(set.has(30))
+// // console.log(set.size)
+// // console.log(set.delete(1))
+// // console.log(set.size)
+// // console.log(set.clear())
+// // console.log(set.size)
+
+// // console.log(set.entries())
+// // for (const key of set) {
+// //     console.log(key)
+// // }
+
+
+// //--------------------
+// function uniqeValues(array) {
+//     return Array.from(new Set(array))
+// }
+// console.log(uniqeValues([1,1,1,2,2,3,4,4,4,5,5,6,6,7,8,9,]))
+
+
+
+
+
+//WeakMap
+// let obj = { name: 'weakmap' }
+// // const arr = [obj]
+// // obj = null
+// // console.log(arr[0])
+
+// const map = new WeakMap([
+//     [obj, 'obj data']
+// ])
+// //get set delete has
+
+// obj = null
+
+// //---------------------
+// const cashe = new WeakMap()
+
+// function casheUser(user) {
+//     if (!cashe.has(user)) {
+//         cashe.set(user, Date.now())
+//     }
+//     return cashe.get(user)
+// }
+
+// let lena = { name: 'Lena' }
+// let alex = { name: 'Alex' }
+// casheUser(lena)
+// casheUser(alex)
+
+// lena =null
+
+// console.log(cashe.has(lena))
+// console.log(cashe.has(alex))
+
+
+
+
+
+
+//WeakSet
+// const users = [
+//         { name: 'Elena' },
+//         { name: 'Alex' },
+//         { name: 'Irina' }
+//     ]
+
+//     const visits = new WeakSet()
+//     visits.add(users[0]).add(users[1])
+
+//     users.splice(1,1)
+
+//     console.log(visits.has(users[0]))
+//     console.log(visits.has(users[1]))
+
+
+//XHR
+// const requestURL = 'https://jsonplaceholder.typicode.com/users'
+
+// function sendRequest(method, url, body = null) {
+//     return new Promise((resolve, reject) => {
+//         const xhr = new XMLHttpRequest()
+
+//         xhr.open(method, url)
+
+//         xhr.responseType = 'json'
+//         xhr.setRequestHeader('Content-Type', 'application/json')
+//         xhr.onload = () => {
+//             if (xhr.status >= 400) {
+//                 reject(xhr.response)
+//             } else {
+//                 resolve(xhr.response)
+//                 // console.log(JSON.parse(xhr.response))
+//             }
+//         }
+
+//         xhr.onerror = () => {
+//             console.log(xhr.response)
+//         }
+
+//         xhr.send(JSON.stringify(body))
+//     })
+// }
+
+// // sendRequest('GET', requestURL)
+// // .then(data=>console.log(data))
+// // .catch(err=>console.log(err))
+
+// sendRequest('POST', requestURL, {
+//     name: 'Yeegor',
+//     age:24
+// })
+//     .then(data => console.log(data))
+//     .catch(err => console.log(err))
+
+
+
+
+//fetch
+// const requestURL = 'https://jsonplaceholder.typicode.com/users'
+
+// function sendRequest(method, url, body = null) {
+//     const headers = {
+//         'Content-Type': 'application/json'
+//     }
+//     return fetch(url, {
+//         method: method,
+//         body: JSON.stringify(body),
+//         headers: headers
+//     }).then(response => {
+//         if (response.ok) {
+//             return response.json()
+//         }
+//         return response.json().then(error => {
+//             const e = new Error('OOPS')
+//             e.data = error
+//             throw e
+//         })
+//     })
+// }
+// // sendRequest('GET', requestURL)
+// //     .then(data => console.log(data))
+// //     .catch(err => console.log(err))
+
+// const body = {
+//     name: 'Yegor',
+//     age: 24
+// }
+// sendRequest('POST', requestURL, body)
+//     .then(data => console.log(data))
+//     .catch(err => console.log(err))
+
+
+
+
+
+
+//Spread
+
+// const citiesRussia = ['Москва', "Санкт-Петербург", "Казань", "Новосибирск"]
+// const citiesEurope = ["Берлин", "Прага", "Париж"]
+
+// const citiesRussiaWithPopulation = {
+//     Moscow: 20,
+//     SaintPeterburg: 8,
+//     Kazan: 5,
+//     Novosibirsk: 3
+// }
+
+// const citiesEuropeWithPopulation = {
+//     Moscow: 26,
+//     Berlin: 10,
+//     Praga: 3,
+//     Paris: 2
+// }
+
+// console.log(...citiesRussia)
+// console.log(...citiesEurope)
+
+// const allCities = [...citiesEurope, 'Вашингтон', ...citiesRussia]
+// const allCities = citiesEurope.concat(citiesRussia)
+// console.log(allCities)
+
+// console.log({...citiesRussiaWithPopulation})
+// console.log({...citiesRussiaWithPopulation, ...citiesEuropeWithPopulation})
+// console.log({...citiesEuropeWithPopulation, ...citiesRussiaWithPopulation})
+
+
+///Practice
+// const numbers = [5, 37, 42, 17]
+// console.log(Math.max(5, 37, 42, 17))
+// console.log(Math.max(...numbers))
+// console.log(Math.max.apply(null, numbers))
+
+// const divs = document.querySelectorAll('div')
+// const nodes = [...divs]
+// console.log(divs)
+// console.log(divs, Array.isArray(divs))
+// console.log(nodes, Array.isArray(nodes))
+// console.log(divs.map())
+
+
+
+
+//Rest
+// const citiesRussia = ['Москва', "Санкт-Петербург", "Казань", "Новосибирск"]
+// const citiesEurope = ["Берлин", "Прага", "Париж"]
+
+// const citiesRussiaWithPopulation = {
+//     Moscow: 20,
+//     SaintPeterburg: 8,
+//     Kazan: 5,
+//     Novosibirsk: 3
+// }
+
+// const citiesEuropeWithPopulation = {
+//     Moscow: 26,
+//     Berlin: 10,
+//     Praga: 3,
+//     Paris: 2
+// }
+
+// function sum(a, b, ...rest) {
+//     // console.log(rest)
+//     return a + b + rest.reduce((a, i) => a + i, 0)
+// }
+// const numbers = [1, 2, 3, 4, 5]
+
+// // console.log(sum(...numbers))
+
+// // const a = numbers[0]
+// // const b = numbers[1]
+
+// // const [a,b, ...other]= numbers
+
+// // console.log(a, b, other)
+
+
+// const person = {
+//     name: 'Max',
+//     age:20,
+//     city:'Moscow',
+//     country:'Russia'
+// }
+
+// const{name, age, ...address} = person
+// console.log(name, age, address)
+
+
+
+
+
+
+
+//Destructirization
+// function calcValues(a, b) {
+//     return [
+//         a + b,
+//         a - b,
+//         a * b,
+//         a / b
+//     ]
+// }
+// const [sum, sub = 'Вычитания нет', mult, ...other] = calcValues(42, 10)
+// // const sum = result[0]
+// // const sub = result[1]
+// // const [sum, sub] = result
+// // console.log(sum, mult, other, sub)
+// const person = {
+//     name: 'Max',
+//     age: 20,
+//     address: {
+//         country: 'Russia',
+//         city: 'Moscow'
+//     }
+// }
+// // const name = person.name
+// // const {
+// //     name: firstName = 'None',
+// //     age,
+// //     car = 'None',
+// //     address:{city: homeTown, country}
+// // } = person
+
+// // const {name, ...info}=person
+
+// // console.log(name, info)
+
+// function logPerson({name, age}) {
+//     console.log(name+' ', age)
+// }
+// logPerson(person)
+
+
+
+
+
+//LocalStorage
+//  const myNumber = 42
+
+// //  localStorage.removeItem('number')
+// //  console.log(localStorage.getItem('number'))
+// //  localStorage.setItem('number', myNumber.toString())
+// //  console.log(localStorage.getItem('number'))
+// // localStorage.clear()
+ 
+// const object = {
+//     name: 'Max',
+//     age: 20
+// }
+// localStorage.setItem('person', JSON.stringify(object))
+
+// const raw = localStorage.getItem('person')
+// const person = JSON.parse(raw)
+// person.name = 'Vladilen'
+// console.log(person)
+
+
+// //----------------------------
+// window.addEventListener('storage', event =>{
+//     console.log(event)
+// })
