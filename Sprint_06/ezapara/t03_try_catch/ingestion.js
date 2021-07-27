@@ -1,5 +1,6 @@
 exports.Ingestion = class {
-  constructor(meal_type = ['breakfast', 'lunch', 'dinner'], id, products, day_of_diet) {
+  meal_type = ['breakfast', 'lunch', 'dinner']
+  constructor( id, products, day_of_diet) {
     this.id = id
     this.day_of_diet = day_of_diet
     this.meal_type = meal_type

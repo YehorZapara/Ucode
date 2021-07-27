@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>About the Superhero</legend>
+            <label for="name">Name</label>
+            <input type="text" name="Name" placeholder="name" tabindex="1" value="" id="name"
+                autofocus>
+            <label for="mail">E-mail</label>
+            <input type="text" name="mail" placeholder="email" tabindex="2" value="" id="alias">
+            <label for="age">Age</label>
+            <input name="Age" tabindex="3" type="number" value="" id="age" min="1" max="999" step="1">
+            <p>
+                <label for="about">About</label>
+                <textarea placeholder="information about the superhero, max 500 symbols" tabindex="4" name="About"
+                    id="about" maxlength="500" rows="5" cols="70"></textarea>
+            </p>
+            <label for="photo">Photo:</label>
+            <input type="file" name="Photo" tabindex="5" id="photo">
+        </fieldset>
+        <p>
+            <button type="reset">Clear</button>
+            <button type="submit">Send</button>
+        </p>
+    </form>
+    <script src="./server.js"></script>
+</body>
+</html>
