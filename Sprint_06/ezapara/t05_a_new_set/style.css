@@ -1,0 +1,12 @@
+.grey {
+    width: 900px;
+    background-color: gray;
+    min-height: 200px;
+    height: auto;
+}
+
+form {
+    width: 885px;
+    border: 2px solid gray;
+    padding: 20px;
+}
