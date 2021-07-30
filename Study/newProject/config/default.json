@@ -1,0 +1,7 @@
+{
+    "port": 5000,
+    "jwtSecret": "Yegor proj",
+    "mongoUri": "mongodb+srv://Yegor:12345@cluster0.z0pca.mongodb.net/app?retryWrites=true&w=majority",
+    "baseUrl": "http://localhost:5000"
+
+}

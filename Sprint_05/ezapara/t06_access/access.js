@@ -5,7 +5,6 @@ module.exports = class Access {
 }
 
 
-
 /*
   Task name: Access
 */
