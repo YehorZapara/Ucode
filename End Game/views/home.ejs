@@ -1,0 +1,46 @@
+<%- include("./header.ejs")  %> 
+<body class="homePage">
+   
+  <img src="https://images.alphacoders.com/100/1002901.jpg" width="100%" height="200%" z-index="-1">
+
+    <section class="welcome">   
+    <div class="move">
+        <p>
+            <i title="decrease card amount" id="minusCardBtn" class="fas fa-minus"></i>
+            <span>
+                <span id="amountDisplay"></span> Amount of Cards
+            </span>            
+            <i title="increase card amount" id="plusCardBtn" class="fas fa-plus"></i>
+        </p>
+        <p>
+            <i title="decrease round amount" id="minusRoundBtn" class="fas fa-minus"></i>
+            <span>
+                <span id="roundDisplay"></span>Amount of Rounds
+            </span>            
+            <i title="increase round amount" id="plusRoundBtn" class="fas fa-plus"></i>
+        </p>
+    </div>   
+        <p>Let's start your memory-game!</p>
+        <p class="linkContainer">
+            <a class="gameLink" title="game url" id="link" href="#"></a>
+            <br><br>
+           
+        </p>
+        
+        <p>
+            Copy and share that link with another person and Get Started!
+             <i id="copyBtn" title="copy url to clipboard" class="far fa-clipboard"></i>
+        </p>
+        
+         <div class="container mj-5">
+        
+        <a href="/logout" class="btn btn-danger">Logout</a>
+    </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script>const id = " ";</script>
+    <script src="./js/home.js"></script>
+ 
+</body>
+    <%- include("./footer.ejs")  %> 

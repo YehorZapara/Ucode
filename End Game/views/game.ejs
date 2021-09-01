@@ -1,0 +1,47 @@
+<%- include("./header.ejs")  %> 
+
+   
+<div class="main">
+    <header id="controls">
+    <div id="title">Marvel Memory Game Online</div>
+    <div id="viewers">
+        <span id="viewerAmount">0</span>
+        <i class="fas fa-user-circle" title="number of viewers"></i>
+    </div>
+    <i id="closeBtn" class="far fa-times-circle"></i>
+</header>
+<body class="mains" >
+   
+<main>    
+    <div id="scoreBoard">
+        <div>
+            <div class="score" id="score0">0</div>
+            <div class="name" id="player0">Player 1</div>
+        </div>
+        <div>
+            Round <span id="round">1</span>/<%= roundAmount %>
+        </div>  
+        <div>
+            <div class="score" id="score1">0</div>
+            <div class="name" id="player1">Player 2</div> 
+        </div>                 
+    </div>
+    <div id="status"></div>
+    <div id="resizeModal">
+        <span>
+            Notice that you can resize the card area on the bottom right.
+        </span>
+        <i title="close this modal" id="closeModal" class="fas fa-times"></i>        
+    </div>
+    <section id="game"></section>    
+</main>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const gameId = "<%= gameId %>";
+    const cardAmount = "<%= cardAmount %>";
+</script>
+<script src="./js/game.js"></script>
+</body></div>
+<%- include("footer")  %>
